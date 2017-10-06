@@ -1,0 +1,16 @@
+#
+install - apt-get install git
+#
+mkdir skriptimine
+#
+cd skriptimine
+#
+#tekita lokaalne repo
+#
+git init
+#
+#
+git remote add skriptimine https://github.com/kasutajanimi/reponimi.git
+#
+#
+git remote -v
