@@ -1,0 +1,9 @@
+#!/bin/bash
+awk -F: '{if(($3 >= 500)&&($3 <65534)) print $1}' /etc/passwd > kasutaja
+while IFS= read line
+do
+kasutaja=$( echo "$line" )
+mkdir /home/$kasutaja/public
+chown -R $kasutaja:$kasutaja /home/$kasutaja/public
+chmod 751 /home/$kasutaja/public
+done < kasutaja
